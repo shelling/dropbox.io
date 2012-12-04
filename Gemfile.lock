@@ -1,0 +1,80 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    activesupport (3.2.9)
+      i18n (~> 0.6)
+      multi_json (~> 1.0)
+    backports (2.6.5)
+    bootstrap-sass (2.2.1.1)
+      sass (~> 3.2)
+    chunky_png (1.2.6)
+    compass (0.12.2)
+      chunky_png (~> 1.2)
+      fssm (>= 0.2.7)
+      sass (~> 3.1)
+    eventmachine (1.0.0)
+    fssm (0.2.9)
+    haml (3.2.0.rc.1)
+      tilt
+    hike (1.2.1)
+    i18n (0.6.1)
+    kgio (2.7.4)
+    macaddr (1.6.1)
+      systemu (~> 2.5.0)
+    mogilefs-client (3.4.0)
+    multi_json (1.4.0)
+    mysql2 (0.3.11)
+    rack (1.4.1)
+    rack-protection (1.2.0)
+      rack
+    rack-test (0.6.2)
+      rack (>= 1.0)
+    raindrops (0.10.0)
+    sass (3.2.3)
+    sequel (3.42.0)
+    sinatra (1.3.3)
+      rack (~> 1.3, >= 1.3.6)
+      rack-protection (~> 1.2)
+      tilt (~> 1.3, >= 1.3.3)
+    sinatra-contrib (1.3.2)
+      backports (>= 2.0)
+      eventmachine
+      rack-protection
+      rack-test
+      sinatra (~> 1.3.0)
+      tilt (~> 1.3)
+    sprockets (2.8.1)
+      hike (~> 1.2)
+      multi_json (~> 1.0)
+      rack (~> 1.0)
+      tilt (~> 1.1, != 1.3.0)
+    sprockets-sass (0.9.1)
+      sprockets (~> 2.0)
+      tilt (~> 1.1)
+    systemu (2.5.2)
+    tilt (1.3.3)
+    unicorn (4.4.0)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
+    uuid (2.3.6)
+      macaddr (~> 1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  activesupport
+  bootstrap-sass
+  compass
+  haml (~> 3.2.0.rc.1)
+  mogilefs-client
+  mysql2
+  sass
+  sequel
+  sinatra
+  sinatra-contrib
+  sprockets (~> 2.0)
+  sprockets-sass
+  unicorn
+  uuid

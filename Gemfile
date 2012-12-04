@@ -2,6 +2,7 @@ source :rubygems
 
 gem 'unicorn'
 gem 'sinatra'
+gem 'sinatra-contrib', :require => "sinatra/contrib/all"
 gem 'sequel'
 gem 'mysql2'
 gem 'activesupport', :require => "active_support/all"
