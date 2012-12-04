@@ -1,0 +1,11 @@
+---
+development:
+    adapter:    mysql2
+    host:       localhost
+    database:   dropbox
+    username:   dropbox
+    password:   dropbox
+    encoding:   utf8
+    pool:       5
+
+production:
