@@ -1,0 +1,19 @@
+.container
+
+    %form#fileupload{method: "post", enctype: "multipart/form-data"}
+
+        .row.fileupload-buttonbar
+
+            .span7
+                %span.btn.btn-success.fileinput-button
+                    %i.icon-plus.icon-white
+                    %span= "上傳檔案"
+                    %input{type: "file", name: "files[]", multiple: "multiple"}
+
+            .span5.fileupload-progress.fade
+                .progress.progress-success.progress-striped.active{:role => "progressbar", :"aria-valuemax" => "100"}
+                    .bar
+
+        .row
+            .span12
+                %ul.filelist
