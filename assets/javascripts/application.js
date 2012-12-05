@@ -3,6 +3,7 @@
 //=require dropboxio
 //=require_tree ./models
 //=require_tree ./collections
+//=require_tree ./views
 //=require_tree ../templates
 
 $(document).ready(function() {
@@ -17,9 +18,7 @@ $(document).ready(function() {
         url: "/file",
         done: function(e, data) {
             new DropboxIO.Collection.Files(data.result).each(function(file) {
-                $(".filelist").append(
-                    DropboxIO.Template["file"](file.toJSON())
-                );
+                new DropboxIO.View.File({model: file}).render();
             });
             $(this).find(".fileupload-progress")
                    .addClass("fade")
@@ -40,9 +39,7 @@ $(document).ready(function() {
         new DropboxIO.Collection.Files().fetch({
             success: function(self, response) {
                 self.each(function(file) {
-                    $(".filelist").append(
-                        DropboxIO.Template["file"](file.toJSON())
-                    );
+                    new DropboxIO.View.File({model: file}).render();
                 });
             },
             error: function(self, xhr) {
