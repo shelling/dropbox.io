@@ -13,8 +13,19 @@ GEM
       fssm (>= 0.2.7)
       sass (~> 3.1)
     eventmachine (1.0.0)
+    execjs (1.4.0)
+      multi_json (~> 1.0)
     fssm (0.2.9)
     haml (3.2.0.rc.1)
+      tilt
+    hamlbars (1.1.0)
+      execjs (>= 1.2)
+      haml
+      sprockets
+      tilt
+    handlebars_assets (0.7.1)
+      execjs (>= 1.2.9)
+      sprockets (>= 2.0.3)
       tilt
     hike (1.2.1)
     i18n (0.6.1)
@@ -68,6 +79,8 @@ DEPENDENCIES
   bootstrap-sass
   compass
   haml (~> 3.2.0.rc.1)
+  hamlbars
+  handlebars_assets
   mogilefs-client
   mysql2
   sass

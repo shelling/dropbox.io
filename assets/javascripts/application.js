@@ -1,23 +1,9 @@
-var DropboxIO = {
-    Model: {},
-    Collection: {},
-    View: {},
-    Router: {},
-    initialize: function() {
-    }
-};
-
-DropboxIO.Model.File = Backbone.Model.extend({
-    initialize: function() {
-    },
-});
-
-DropboxIO.Collection.Files = Backbone.Collection.extend({
-    initialize: function() {
-    },
-    model: DropboxIO.Model.File,
-    url: "/file/list",
-});
+//=require handlebars.runtime
+//=require handlebars
+//=require dropboxio
+//=require_tree ./models
+//=require_tree ./collections
+//=require_tree ../templates
 
 $(document).ready(function() {
 
@@ -32,7 +18,7 @@ $(document).ready(function() {
         done: function(e, data) {
             new DropboxIO.Collection.Files(data.result).each(function(file) {
                 $(".filelist").append(
-                    $("<li>").html(file.get("filename"))
+                    DropboxIO.Template["file"](file.toJSON())
                 );
             });
             $(this).find(".fileupload-progress")
@@ -55,7 +41,7 @@ $(document).ready(function() {
             success: function(self, response) {
                 self.each(function(file) {
                     $(".filelist").append(
-                        $("<li>").html(file.get("filename"))
+                        DropboxIO.Template["file"](file.toJSON())
                     );
                 });
             },

@@ -17,6 +17,8 @@ class App < Sinatra::Base
     Sequel::Model.plugin :timestamps, :update_on_create => true
     Sequel::Model.plugin :validation_helpers
 
+    Hamlbars::Template.template_destination = "DropboxIO.Template"
+
     enable :logging
 
     helpers do
