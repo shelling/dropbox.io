@@ -4,7 +4,13 @@
 
         .row.fileupload-buttonbar
 
-            .span6.offset3.fileupload-progress.fade
+            .span2.offset3
+                %span.btn.btn-success.fileinput-button
+                    %i.icon-plus.icon-white
+                    %span= "上傳檔案"
+                    %input{type: "file", name: "files[]", multiple: "multiple"}
+
+            .span4.fileupload-progress.fade
                 .progress.progress-success.progress-striped.active{:role => "progressbar", :"aria-valuemax" => "100"}
                     .bar
 
