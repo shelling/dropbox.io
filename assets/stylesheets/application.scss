@@ -1,6 +1,15 @@
 
 #header {
     height: 140px;
+    h1 {
+        margin: 0 auto;
+        display: block;
+        font-size: 80px;
+        line-height: 80px;
+        font-family: Lobster;
+        text-align: center;
+        padding: 20px 0;
+    }
 }
 
 .fileinput-button {
