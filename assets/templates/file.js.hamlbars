@@ -1,1 +1,6 @@
-{{ filename }}
+%td
+    {{ filename }}
+    %a{href: "{{ original }}"}
+        %i.icon-download
+%td
+    %a.close= "&times;"

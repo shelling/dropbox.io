@@ -8,6 +8,8 @@
 
 $(document).ready(function() {
 
+    $.ajaxSetup({ cache: false });
+
     var FU = $("#fileupload");
 
     FU.fileupload({
