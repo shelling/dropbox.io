@@ -1,6 +1,8 @@
 %td
     {{ filename }}
+%td
     %a{href: "{{ original }}"}
         %i.icon-download
 %td
-    %a.close= "&times;"
+    %a{href: "#"}
+        %i.icon-trash
