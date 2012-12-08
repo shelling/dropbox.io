@@ -4,7 +4,7 @@ DropboxIO.View.File = Backbone.View.extend({
     },
     tagName: "tr",
     events: {
-        "click a.close": "destroy",
+        "click a.destroy": "destroy"
     },
     destroy: function(e) {
         e.preventDefault();
