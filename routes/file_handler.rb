@@ -1,6 +1,6 @@
 class App < Sinatra::Base
 
-    get "/file/list" do
+    get "/file/?" do
         MogFile.all.to_json
     end
 
