@@ -27,6 +27,9 @@ class App < Sinatra::Base
     end
 
     helpers Sinatra::ContentFor
+    helpers Sinatra::JSON
+
+    set :json_encoder, :to_json
 
     not_found do
         "not found"
