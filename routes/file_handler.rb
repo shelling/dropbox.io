@@ -24,11 +24,11 @@ class App < Sinatra::Base
     end
 
     post "/file/?" do
-        params[:files].map { |f|
+        json params[:files].map { |f|
             @mogfile = MogFile.new(f)
             @mogfile.save
             @mogfile.to_hash
-        }.to_json
+        }
     end
 
     put "/file/:uuid" do
