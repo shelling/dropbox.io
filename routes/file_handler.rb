@@ -27,7 +27,7 @@ class App < Sinatra::Base
         json params[:files].map { |f|
             @mogfile = MogFile.new(f)
             @mogfile.save
-            @mogfile.to_hash
+            @mogfile
         }
     end
 
