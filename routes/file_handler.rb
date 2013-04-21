@@ -1,7 +1,7 @@
 class App < Sinatra::Base
 
     get "/file/?" do
-        MogFile.all.to_json
+        json MogFile.all
     end
 
     get "/file/:uuid/?" do
