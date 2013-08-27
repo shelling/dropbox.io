@@ -18,21 +18,22 @@ $(document).ready(function() {
         multipart: true,
         type: "post",
         url: "/file",
+        start: function(e) {
+            this.ladda = this.ladda || Ladda.create($(this).find(".ladda-button")[0]);
+            this.ladda.start();
+        },
+        fail: function(e) {
+            this.ladda.stop();
+        },
         done: function(e, data) {
             new DropboxIO.Collection.Files(data.result).each(function(file) {
                 new DropboxIO.View.File({model: file}).render();
             });
-            $(this).find(".fileupload-progress")
-                   .addClass("fade")
-                   .find(".bar")
-                   .css("width", "0%")
+            this.ladda.stop();
         },
         progressall: function(e, data) {
             var progress = parseInt(data.loaded / data.total * 100, 10);
-            $(this).find(".fileupload-progress")
-                   .removeClass("fade")
-                   .find(".bar")
-                   .css("width", progress + "%")
+            this.ladda.setProgress(progress/100);
         }
     });
 

@@ -2,17 +2,9 @@
 
     %form#fileupload{method: "post", enctype: "multipart/form-data"}
 
-        .row.fileupload-buttonbar
-
-            .span2.offset3
-                %span.btn.btn-success.fileinput-button
-                    %i.icon-plus.icon-white
-                    %span= "上傳檔案"
-                    %input{type: "file", name: "files[]", multiple: "multiple"}
-
-            .span4.fileupload-progress.fade
-                .progress.progress-success.progress-striped.active{:role => "progressbar", :"aria-valuemax" => "100"}
-                    .bar
+        %button.fileinput-button.ladda-button{data: {style: "expand-right"}}
+            %span= "upload"
+            %input{type: "file", name: "files[]", multiple: "multiple"}
 
         .row
             .span6.offset3
