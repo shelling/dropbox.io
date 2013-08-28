@@ -1,11 +1,6 @@
 .container
-
     %form#fileupload{method: "post", enctype: "multipart/form-data"}
-
         %button#upload.ladda-button{data: {style: "expand-right"}}
             %span= "upload"
             %input{type: "file", name: "files[]", multiple: "multiple"}
-
-        .row
-            .span6.offset3
-                %table.table.table-striped.filelist
+    %table.table.table-striped.filelist
