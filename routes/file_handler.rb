@@ -17,6 +17,7 @@ class App < Sinatra::Base
         @mog_file = MogFile.where(mogkey: params[:uuid]).first
         if @mog_file
             headers "X-REPROXY-URL"  => @mog_file.path[0],
+                    "X-Accel-Redirect" => "/reproxy",
                     "Content-Type"   => @mog_file.mimetype
         else
             not_found
