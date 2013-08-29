@@ -1,0 +1,19 @@
+upstream dropbox {
+#   server ...;
+}
+
+server {
+    listen                    80;
+#   server_name               ...;
+    client_max_body_size      200m;
+    open_file_cache_valid     60s;
+    location / {
+        proxy_pass http://dropbox;
+        expires max;
+    }
+    location /reproxy {
+        internal;
+        set $reproxy $upstream_http_x_reproxy_url;
+        proxy_pass $reproxy;
+    }
+}
