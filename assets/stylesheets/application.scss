@@ -17,7 +17,11 @@
     margin: 0 auto 30px;
     display: block;
     position: relative;
+    border-bottom: 3px #333 solid;
     @include transition(0.4s cubic-bezier(0.175, 0.885, 0.32, 0.85) all);
+    &:active {
+        border-bottom: 3px rgba(1,1,1,0) solid;
+    }
     input {
         position: absolute;
         top: 0;
