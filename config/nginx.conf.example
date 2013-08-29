@@ -7,6 +7,8 @@ server {
 #   server_name               ...;
     client_max_body_size      200m;
     open_file_cache_valid     60s;
+    open_file_cache           max=1000 inactive=20s;
+    open_file_cache_min_uses  2;
     location / {
         proxy_pass http://dropbox;
         expires max;
