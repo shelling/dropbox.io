@@ -32,4 +32,15 @@
 .filelist {
     width: 300px;
     margin: 0 auto;
+    td:first-child {
+        width: 240px;
+        min-width: 240px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
+
+#upload[data-style=expand-right][data-loading] {
+    padding-right: 120px;
+    padding-left: 120px;
 }
