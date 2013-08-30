@@ -30,7 +30,7 @@
         margin: 0;
         height: 100%;
         width: 100%;
-        opacity: 0;
+        @include opacity(0);
         cursor: pointer;
         z-index: 5;
     }
