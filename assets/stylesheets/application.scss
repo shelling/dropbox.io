@@ -18,7 +18,7 @@
     display: block;
     position: relative;
     border-bottom: 3px #333 solid;
-    @include transition(0.4s cubic-bezier(0.175, 0.885, 0.32, 0.85) all);
+    @include transition(0.6s cubic-bezier(0.175, 0.885, 1.25, 1.25) padding);
     &:active {
         border-top: 3px #333 solid;
         border-bottom: 1px rgba(1,1,1,0) solid;
