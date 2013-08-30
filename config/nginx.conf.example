@@ -16,6 +16,8 @@ server {
     location /reproxy {
         internal;
         set $reproxy $upstream_http_x_reproxy_url;
+        proxy_hide_header Content-Type;
+        proxy_buffering off;
         proxy_pass $reproxy;
     }
 }
